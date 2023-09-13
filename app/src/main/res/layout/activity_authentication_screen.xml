@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthenticationScreen">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:overScrollMode="always"
+        >
+        <LinearLayout
+            android:id="@+id/qr_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Authentication Code"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <ImageView
+                android:id="@+id/qrImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="visible" />
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:id="@+id/user_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="123456"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:id="@+id/website_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="https://xmoothi.web.app/"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:id="@+id/refresh_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_item_selector"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Refresh Code"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="How to Connect?"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="1- Scan QR or Visit above website from mobile device"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:custom_font="bold.otf">
+
+            </com.smilieideas.searchwithinstagram.views.CustomTextView>
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="2- Sign in anonymously or sign up from web page using sign up button"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="3- Once you are sign in press (Connect to Instagram) button and allow required access to your instagram account"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="4- On Last Screen Enter Authentication Code displayed above and its done."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="PhotoLibrary App Connect"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:visibility="gone"
+                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="https://play.google.com/store/apps/details?id=com.smilieideas.googlephototvconnect"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:custom_font="bold.otf">
+
+            </com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loadingView"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar.Large"
+            />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creating Code...."
+            android:textAllCaps="true"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/errorMessage"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@android:drawable/stat_sys_warning"
+            app:tint="@color/colorAccent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unable to create code.Please make sure you have an active internet connection and Try Again.."
+            android:textAllCaps="true"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:id="@+id/retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:textAllCaps="true"
+                android:textSize="18dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/button_item_selector"
+                android:nextFocusForward="@id/exit"
+
+                ></TextView>
+            <TextView
+                android:nextFocusLeft="@id/retry"
+                android:id="@+id/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:textAllCaps="true"
+                android:textSize="18dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/button_item_selector"
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

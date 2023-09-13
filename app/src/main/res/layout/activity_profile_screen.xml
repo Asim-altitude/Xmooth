@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_sc"
+    tools:context=".ProfileScreen">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_item_selector"
+            android:focusable="false"
+            android:gravity="left"
+            android:text="Connected to Instagram as"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:custom_font="Roboto_Medium.ttf">
+
+        </com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_item_selector"
+            android:text="user.instagram"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:visibility="visible"
+            android:id="@+id/email_txt"
+            app:custom_font="Roboto_Medium.ttf" />
+
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            app:custom_font="Roboto_Medium.ttf"
+            android:id="@+id/sign_out_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disconnect from Instagram"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:background="@drawable/google_ui_item_selector"
+            ></com.smilieideas.searchwithinstagram.views.CustomTextView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

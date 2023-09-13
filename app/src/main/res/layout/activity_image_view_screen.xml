@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.smilieideas.searchwithinstagram.ImageViewScreen">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/back"
+        android:src="@drawable/back"
+        app:tint="@color/white"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:background="@drawable/search_item_selector"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_view"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:id="@+id/info_lay"
+        android:visibility="gone"
+        >
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            app:custom_font="Roboto_Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posted by"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                app:custom_font="Roboto_Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:focusable="false"
+                android:padding="5dp"
+                android:id="@+id/username_txt"
+                android:textColor="@color/colorAccent"
+                />
+
+
+        </LinearLayout>
+
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            app:custom_font="Roboto_Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="...."
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:padding="5dp"
+            android:id="@+id/date_txt"
+            android:textColor="@color/white"
+            />
+
+        <com.smilieideas.searchwithinstagram.views.CustomTextView
+            app:custom_font="Roboto_Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:id="@+id/caption_txt"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:focusable="false"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
