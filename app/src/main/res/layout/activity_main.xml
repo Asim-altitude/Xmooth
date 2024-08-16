@@ -4,89 +4,338 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_sc"
+    android:background="@color/black"
     tools:context=".MainActivity">
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:id="@+id/bottomLay"
         >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="15dp"
-            android:elevation="3dp"
-            android:id="@+id/home_nav"
-            android:background="@drawable/tab_strip"
+        <ScrollView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
             >
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
-                app:custom_font="Roboto_Medium.ttf"
-                android:layout_width="100dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Home"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:padding="15dp"
-                android:id="@+id/home_btn"
-                android:background="@drawable/nav_item_selector"
-                android:textColor="@color/theme"
-                />
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:id="@+id/home_nav"
+                >
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
-                app:custom_font="Roboto_Medium.ttf"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="Videos"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:id="@+id/video_btn"
-                android:padding="15dp"
-                android:background="@drawable/nav_item_selector"
-                android:textColor="@color/theme"
-                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:id="@+id/profile_view"
+                    android:background="@drawable/menu_item_selector"
+                    >
 
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        >
 
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user_image"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/white_image" />
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
-                app:custom_font="Roboto_Medium.ttf"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Photos"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:id="@+id/photo_tab"
-                android:padding="15dp"
-                android:visibility="visible"
-                android:background="@drawable/nav_item_selector"
-                android:textColor="@color/theme"
-                />
-
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
-                app:custom_font="Roboto_Medium.ttf"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Profile"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:id="@+id/profile_btn"
-                android:padding="15dp"
-                android:background="@drawable/nav_item_selector"
-                android:textColor="@color/theme"
-                />
+                        <com.smilieideas.xmooth.views.CustomTextView
+                            android:id="@+id/initial_text"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:focusable="false"
+                            android:text="A"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            app:custom_font="insignia_roman.ttf"></com.smilieideas.xmooth.views.CustomTextView>
 
 
-        </LinearLayout>
+                    </RelativeLayout>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <com.smilieideas.xmooth.views.CustomTextView
+                            android:id="@+id/name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:text="User Name"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grey"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            app:custom_font="insignia_roman.ttf"></com.smilieideas.xmooth.views.CustomTextView>
+
+                        <com.smilieideas.xmooth.views.CustomTextView
+                            android:id="@+id/email_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:text="User Name"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            app:custom_font="Montserrat_Regular.ttf"></com.smilieideas.xmooth.views.CustomTextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <!--<com.smilieideas.xmooth.views.CustomTextView
+                    app:custom_font="bold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wall_tab"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/wall_btn"
+                    android:padding="15dp"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    android:nextFocusRight="@id/profile_tab"
+                    android:nextFocusDown="@id/add_album_btn"
+                    android:nextFocusForward="@id/profile_tab"
+                    android:nextFocusUp="@id/add_album_btn"
+
+                    android:background="@drawable/button_item_selector"
+                    android:textColor="@color/black"
+                    />
+
+                 <com.smilieideas.xmooth.views.CustomTextView
+                    app:custom_font="bold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/profile_btn"
+                    android:layout_margin="5dp"
+                    android:padding="15dp"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:background="@drawable/button_item_selector"
+                    android:textColor="@color/black"
+                    />
+
+
+                <com.smilieideas.xmooth.views.CustomTextView
+                    app:custom_font="bold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/utilities_tab"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/utility_btn"
+                    android:layout_margin="5dp"
+                    android:padding="15dp"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:background="@drawable/button_item_selector"
+                    android:textColor="@color/black"
+                    />-->
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:focusable="true"
+                    android:nextFocusUp="@id/profile_view"
+                    android:background="@drawable/menu_item_selector"
+                    android:id="@+id/home_btn"
+
+                    >
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/baseline_home_24"
+                        app:tint="@color/white"
+                        android:focusable="false"
+                        />
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        app:custom_font="Montserrat_Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Home"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:focusable="true"
+                    android:background="@drawable/menu_item_selector"
+                    android:id="@+id/photo_btn"
+
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/photo_icon"
+                        app:tint="@color/white"
+                        android:focusable="false"
+
+                        />
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        app:custom_font="Montserrat_Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Photos"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:nextFocusUp="@id/photo_btn"
+                    android:nextFocusDown="@id/album_btn"
+                    android:background="@drawable/menu_item_selector"
+                    android:id="@+id/video_btn"
+
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/video_menu_icon"
+                        app:tint="@color/white"
+                        />
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        app:custom_font="Montserrat_Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Videos"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:focusable="true"
+                    android:nextFocusUp="@id/video_btn"
+                    android:nextFocusDown="@id/premium_btn"
+                    android:background="@drawable/menu_item_selector"
+                    android:id="@+id/album_btn"
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/album_icon"
+                        app:tint="@color/white"
+                        />
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        app:custom_font="Montserrat_Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Albums"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="15dp"
+                    android:focusable="true"
+                    android:nextFocusUp="@id/album_btn"
+                    android:background="@drawable/menu_item_selector"
+                    android:id="@+id/premium_btn"
+
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/premium_colored"
+                        />
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        app:custom_font="Montserrat_Bold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Premium"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -97,11 +346,127 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            >
+              android:layout_marginTop="20dp"
 
-            <androidx.recyclerview.widget.RecyclerView
+              >
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  >
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_alignParentRight="true"
+                      android:layout_marginLeft="20dp"
+                      android:layout_marginRight="20dp"
+                      android:layout_marginBottom="10dp"
+                      android:id="@+id/rootfilterLay"
+                      >
+
+                      <LinearLayout
+                          android:id="@+id/refrshLay"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/nav_item_selector"
+                          android:gravity="center_vertical"
+                          android:nextFocusRight="@id/slideshowLay"
+                          android:nextFocusDown="@id/itemGridList"
+                          android:orientation="horizontal"
+                          android:layout_marginRight="10dp"
+                          android:padding="10dp">
+
+                          <ImageView
+                              android:layout_width="25dp"
+                              android:layout_height="25dp"
+                              android:src="@drawable/baseline_refresh_24"
+                              app:tint="@color/white" />
+
+                          <com.smilieideas.xmooth.views.CustomTextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Refresh"
+                              android:textColor="@color/white"
+                              android:textSize="16sp"
+                              app:custom_font="Montserrat_Regular.ttf"
+
+                              />
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:id="@+id/slideshowLay"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/nav_item_selector"
+                          android:gravity="center_vertical"
+                          android:nextFocusLeft="@id/refrshLay"
+                          android:nextFocusRight="@id/designLay"
+                          android:nextFocusDown="@id/itemGridList"
+                          android:orientation="horizontal"
+                          android:layout_marginRight="10dp"
+                          android:padding="10dp">
+
+                          <ImageView
+                              android:layout_width="25dp"
+                              android:layout_height="25dp"
+                              android:src="@drawable/ic_play_arrow_black_24dp"
+                              app:tint="@color/white" />
+
+                          <com.smilieideas.xmooth.views.CustomTextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Slideshow"
+                              android:textColor="@color/white"
+                              android:textSize="16sp"
+                              app:custom_font="Montserrat_Regular.ttf"
+
+                              />
+                      </LinearLayout>
+
+
+                      <LinearLayout
+                          android:id="@+id/designLay"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/nav_item_selector"
+                          android:gravity="center_vertical"
+                          android:nextFocusLeft="@id/slideshowLay"
+                          android:nextFocusDown="@id/itemGridList"
+                          android:orientation="horizontal"
+                          android:padding="10dp">
+
+                          <ImageView
+                              android:id="@+id/staggered_icon"
+                              android:layout_width="25dp"
+                              android:layout_height="25dp"
+                              android:padding="5dp"
+                              android:src="@drawable/staggered"
+                              app:tint="@color/white" />
+
+                          <com.smilieideas.xmooth.views.CustomTextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Layout"
+                              android:textColor="@color/white"
+                              android:textSize="16sp"
+                              app:custom_font="Montserrat_Regular.ttf"
+
+                              />
+                      </LinearLayout>
+
+
+                  </LinearLayout>
+
+
+              </RelativeLayout>
+
+
+              <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:id="@+id/videoList"
                 android:visibility="visible"
                 />
@@ -111,6 +476,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/itemGridList"
                 android:visibility="visible"
+                android:layout_marginTop="10dp"
                 />
 
               <LinearLayout

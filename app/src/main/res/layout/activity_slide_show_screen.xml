@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SlideShowScreen"
+    android:keepScreenOn="true"
+    >
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/bg"
+      android:scaleType="centerCrop"
+      android:visibility="visible"
+      />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#50000000"
+      />
+
+
+  <com.smilieideas.xmooth.views.CustomViewPager
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/viewpager"
+      />
+
+  <FrameLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:background="@color/black"
+      android:id="@+id/video_container"
+      android:visibility="gone"
+      >
+    <!-- Video player -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"/>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:id="@+id/loading_view"
+        android:src="@drawable/loading"
+        android:visibility="gone"
+        />
+
+  </FrameLayout>
+
+<!--  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/firstSlide"
+      android:scaleType="centerCrop"
+
+      />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/secondSlide"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        />-->
+
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        app:tint="@color/white"
+        android:layout_margin="10dp"
+        android:id="@+id/back"
+        android:visibility="gone"
+        android:background="@drawable/button_item_selector"
+        />
+
+  <ImageView
+      android:id="@+id/settings_btn"
+      android:layout_width="50dp"
+      android:layout_height="40dp"
+      android:layout_alignParentRight="true"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/button_item_selector"
+      android:visibility="gone"
+      app:tint="@color/colorAccent" />
+
+  <ImageView
+      android:id="@+id/play_btn"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/baseline_pause_24"
+      android:visibility="gone"
+      android:layout_centerInParent="true"
+      app:tint="@color/colorAccent" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentBottom="true"
+      android:layout_margin="10dp"
+      android:id="@+id/info_lay"
+      android:visibility="gone"
+      >
+    <com.smilieideas.xmooth.views.CustomTextView
+        app:custom_font="Roboto_Regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posted by"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:focusable="false"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        >
+      <com.smilieideas.xmooth.views.CustomTextView
+          app:custom_font="Roboto_Medium.ttf"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="..."
+          android:gravity="center"
+          android:textStyle="bold"
+          android:textSize="18sp"
+          android:focusable="false"
+          android:padding="5dp"
+          android:id="@+id/username_txt"
+          android:textColor="@color/colorAccent"
+          />
+
+
+    </LinearLayout>
+
+    <com.smilieideas.xmooth.views.CustomTextView
+        app:custom_font="Roboto_Medium.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:focusable="false"
+        android:padding="5dp"
+        android:id="@+id/date_txt"
+        android:textColor="@color/white"
+        />
+
+    <com.smilieideas.xmooth.views.CustomTextView
+        app:custom_font="Roboto_Regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="...."
+        android:gravity="center"
+        android:id="@+id/caption_txt"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:focusable="false"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        />
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/save_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/button_item_selector"
+        android:src="@drawable/baseline_save_alt_24" />
+
+    <ImageView
+        android:id="@+id/share_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_item_selector"
+        android:src="@drawable/baseline_share_24" />
+
+
+  </LinearLayout>
+
+
+</RelativeLayout>

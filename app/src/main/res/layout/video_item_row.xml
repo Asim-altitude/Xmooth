@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="110dp"
-    android:layout_height="110dp"
-    android:layout_margin="10dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_insta"
+        />
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,6 +18,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder"
         app:civ_border_width="2dp"
+        android:padding="3dp"
         app:civ_border_color="@color/theme"
         />
 
@@ -30,5 +37,27 @@
             />
     </RelativeLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lock_btn"
+        android:visibility="gone"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="#90000000" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/lock"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:visibility="visible"
+            />
+    </FrameLayout>
 
 </RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root"
+    android:padding="5dp"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/coverPic"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#50000000" />
+
+    <ImageView
+        android:id="@+id/video_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        app:tint="@color/white" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lock_btn"
+        android:visibility="gone"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="#90000000" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/lock"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:visibility="visible"
+            />
+    </FrameLayout>
+
+
+</RelativeLayout>

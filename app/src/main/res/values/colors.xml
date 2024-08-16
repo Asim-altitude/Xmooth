@@ -3,9 +3,20 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorGrey">#282727</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="transparent">#50000000</color>
     <color name="bg_sc">#FAF9F6</color>
     <color name="theme">#7B045B</color>
+     <color name="blue">#427CE1</color>
+    <color name="tab_bg">#3B3A3A</color>
+    <color name="grey">#808283</color>
+    <color name="transparent_black">#60000000</color>
+    <color name="transparent_black_overlay">#80000000</color>
+    <color name="bg_color">#283747</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="sign_in_button_color">#808283</color>
+    <color name="gnt_red">#282727</color>
+    <color name="green">#008000</color>
 </resources>

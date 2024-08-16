@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".AuthenticationScreen">
 
 
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:overScrollMode="always"
+        android:background="@color/black"
+
         >
         <LinearLayout
             android:id="@+id/qr_lay"
@@ -19,24 +22,24 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@color/black"
             android:gravity="center"
             android:orientation="vertical"
             android:visibility="visible">
 
 
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="Authentication Code"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
             <ImageView
                 android:id="@+id/qrImageView"
@@ -44,7 +47,7 @@
                 android:layout_height="200dp"
                 android:visibility="visible" />
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:id="@+id/user_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,9 +58,9 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="45dp"
                 android:textStyle="bold"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:id="@+id/website_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,12 +69,12 @@
                 android:padding="10dp"
                 android:text="https://xmoothi.web.app/"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:id="@+id/refresh_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,9 +88,9 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:visibility="gone"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -96,55 +99,55 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:text="1- Scan QR or Visit above website from mobile device"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 app:custom_font="bold.otf">
 
-            </com.smilieideas.searchwithinstagram.views.CustomTextView>
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            </com.smilieideas.xmooth.views.CustomTextView>
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:text="2- Sign in anonymously or sign up from web page using sign up button"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:text="3- Once you are sign in press (Connect to Instagram) button and allow required access to your instagram account"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:text="4- On Last Screen Enter Authentication Code displayed above and its done."
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
 
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -153,9 +156,9 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="20dp"
                 android:visibility="gone"
-                app:custom_font="bold.otf"></com.smilieideas.searchwithinstagram.views.CustomTextView>
+                app:custom_font="bold.otf"></com.smilieideas.xmooth.views.CustomTextView>
 
-            <com.smilieideas.searchwithinstagram.views.CustomTextView
+            <com.smilieideas.xmooth.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -165,7 +168,7 @@
                 android:visibility="gone"
                 app:custom_font="bold.otf">
 
-            </com.smilieideas.searchwithinstagram.views.CustomTextView>
+            </com.smilieideas.xmooth.views.CustomTextView>
 
 
         </LinearLayout>

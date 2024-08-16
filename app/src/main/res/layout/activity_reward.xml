@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/anime_landscape"
+        android:scaleType="fitXY"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/premium_colored" />
+
+                <com.smilieideas.xmooth.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Unlock Premium Features"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:layout_marginLeft="10dp"
+                    app:custom_font="insignia_roman.ttf" />
+            </LinearLayout>
+
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:text="Unlock Premium Version"
+                android:textColor="@color/colorAccent"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:custom_font="insignia_roman.ttf" />
+
+             <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="- View Unlimited Google Photos and Videos"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:custom_font="insignia_roman.ttf" />
+
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="- Explore your Google Photos library using search options"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:custom_font="insignia_roman.ttf" />
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="- Backup Device Photos to Cloud."
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:custom_font="insignia_roman.ttf" />
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="- Customizable Photo and Video SlideShow."
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:custom_font="insignia_roman.ttf" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:id="@+id/photo_version_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item_selector"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Weekly"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:custom_font="bold.otf"
+
+                />
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:id="@+id/creator_version_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item_selector"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Monthly"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:custom_font="bold.otf"
+
+                />
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:id="@+id/all_version_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_item_selector"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Yearly"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:custom_font="bold.otf"
+
+                />
+
+        </LinearLayout>
+
+        <com.smilieideas.xmooth.views.CustomTextView
+            android:id="@+id/offer_text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Offer valid for instant purchase only."
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:custom_font="bold.otf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_item_selector"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_item_selector"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:text="Please Upgrade to Premium Version and Enjoy Full Access to Premium Features"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                app:custom_font="insignia_roman.ttf" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:id="@+id/premium_btn"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/menu_item_selector"
+                    >
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="LifeTime"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        app:custom_font="Montserrat_Bold.ttf" />
+
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-----"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:id="@+id/item_price_txt"
+                        app:custom_font="Montserrat_Regular.ttf" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="180dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.smilieideas.xmooth.views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:custom_font="Montserrat_Regular.ttf" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.smilieideas.xmooth.views.CustomTextView
+                android:id="@+id/offer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="(Save 50%)"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:custom_font="bold.otf" />
+        </LinearLayout>
+
+
+        
+    </LinearLayout>
+
+    <com.smilieideas.xmooth.views.CustomTextView
+        android:id="@+id/restore_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/menu_item_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Restore"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:custom_font="bold.otf" />
+
+
+</RelativeLayout>

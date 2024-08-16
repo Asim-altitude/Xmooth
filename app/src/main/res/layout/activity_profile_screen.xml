@@ -15,7 +15,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         >
-        <com.smilieideas.searchwithinstagram.views.CustomTextView
+        <com.smilieideas.xmooth.views.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -29,10 +29,10 @@
             android:textStyle="bold"
             app:custom_font="Roboto_Medium.ttf">
 
-        </com.smilieideas.searchwithinstagram.views.CustomTextView>
+        </com.smilieideas.xmooth.views.CustomTextView>
 
 
-        <com.smilieideas.searchwithinstagram.views.CustomTextView
+        <com.smilieideas.xmooth.views.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -44,7 +44,7 @@
             android:id="@+id/email_txt"
             app:custom_font="Roboto_Medium.ttf" />
 
-        <com.smilieideas.searchwithinstagram.views.CustomTextView
+        <com.smilieideas.xmooth.views.CustomTextView
             app:custom_font="Roboto_Medium.ttf"
             android:id="@+id/sign_out_btn"
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
             android:layout_alignParentRight="true"
             android:textColor="@color/black"
             android:background="@drawable/google_ui_item_selector"
-            ></com.smilieideas.searchwithinstagram.views.CustomTextView>
+            ></com.smilieideas.xmooth.views.CustomTextView>
 
     </LinearLayout>
 

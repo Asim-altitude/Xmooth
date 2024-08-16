@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.smilieideas.searchwithinstagram">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <application
         android:allowBackup="true"
@@ -14,7 +13,9 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".AuthenticationScreen"
+        <activity android:name="com.smilieideas.xmooth.SlideShowScreen"></activity>
+
+        <activity android:name="com.smilieideas.xmooth.AuthenticationScreen"
             android:exported="true"
             >
             <intent-filter>
@@ -29,26 +30,39 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ProfileScreen" ></activity>
+        <activity android:name="com.smilieideas.xmooth.ProfileScreen" ></activity>
+        <activity android:name=".RewardActivity"/>
 
-        <activity android:name=".VideoScreen" android:screenOrientation="landscape"></activity>
-        <activity android:name=".ImageViewScreen" android:screenOrientation="landscape" />
-        <activity android:name=".MainActivity"  android:screenOrientation="landscape"
+        <activity android:name="com.smilieideas.xmooth.VideoScreen" android:screenOrientation="landscape"></activity>
+        <activity android:name="com.smilieideas.xmooth.ImageViewScreen" android:screenOrientation="landscape" />
+        <activity android:name="com.smilieideas.xmooth.MainActivity"
             android:exported="false">
 
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
     <uses-feature
         android:name="android.hardware.gamepad"
         android:required="false" />
     <uses-feature
         android:name="android.software.leanback"
-        android:required="true" />
+        android:required="false" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
