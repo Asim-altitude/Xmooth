@@ -5,10 +5,13 @@ import java.io.Serializable;
 public class SearchDataClass implements Serializable
 {
     private String id,imagePath, videoPath, mimeType;
-    private boolean isVideo,locked;
+    private boolean isVideo,locked,isAlbum;
+
 
     public SearchDataClass() {
         locked = false;
+        isVideo = false;
+        isAlbum = false;
     }
 
     public boolean isLocked() {
@@ -57,5 +60,13 @@ public class SearchDataClass implements Serializable
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public boolean isAlbum() {
+        return isAlbum;
+    }
+
+    public void setAlbum(boolean album) {
+        isAlbum = album;
     }
 }

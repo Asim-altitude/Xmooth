@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    android:background="@drawable/album_unselected"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_thumb"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/video_Lay"
+        android:background="@color/transparent"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:id="@+id/media_type_view"
+            android:src="@drawable/video_icon"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lock_btn"
+        android:visibility="gone"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="#90000000" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/lock"
+            android:layout_margin="25dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:visibility="visible"
+            />
+    </FrameLayout>
+
+
+</RelativeLayout>

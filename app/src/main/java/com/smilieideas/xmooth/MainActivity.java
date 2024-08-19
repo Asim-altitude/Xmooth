@@ -78,8 +78,12 @@ public class MainActivity extends AppCompatActivity {
         back_btn = findViewById(R.id.back_home_btn);
         inital_txt = findViewById(R.id.initial_text);
         user_name = findViewById(R.id.name_text);
+        slideshow_btn = findViewById(R.id.slideshowLay);
         user_name.setText(email);
         inital_txt.setText(email.substring(0,1).toUpperCase());
+
+        if (Constants.isPremium(this))
+            premium_btn.setVisibility(View.GONE);
 
         applyFocus(home_tab);
         applyFocus(photo_tab);
@@ -106,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* slideshow_btn.setOnClickListener(new View.OnClickListener() {
+        slideshow_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SlideShowScreen.class);
@@ -116,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-*/
+
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,6 +151,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                // video_list.setVisibility(View.GONE);
                 showPhotoScreen();
+            }
+        });
+
+        album_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // video_list.setVisibility(View.GONE);
+                showAlbumsScreen();
             }
         });
 
@@ -215,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         gridAdapter = new PhotoAdapter(searchDataClassList, tempList,this);
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(CloudDB.checkIfTV(this)?4:2,StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(CloudDB.checkIfTV(this)?4:4,StaggeredGridLayoutManager.VERTICAL);
         gridView.setLayoutManager(staggeredGridLayoutManager);
        // gridView.addItemDecoration(new SpaceItemdecoration(5));
         gridView.setAdapter(gridAdapter);
@@ -277,14 +289,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void showHomeScreen() {
         gridAdapter.showAll();
+        slideshow_btn.setVisibility(View.VISIBLE);
     }
 
     private void showPhotoScreen() {
         gridAdapter.showPhotos();
+        slideshow_btn.setVisibility(View.VISIBLE);
+    }
+
+    private void showAlbumsScreen() {
+        gridAdapter.showAlbums();
+        slideshow_btn.setVisibility(View.GONE);
     }
 
     private void showVideoScreen() {
         gridAdapter.showVideos();
+        slideshow_btn.setVisibility(View.GONE);
     }
 
     void applyFocus(LinearLayout linearLayout){
@@ -375,6 +395,14 @@ public class MainActivity extends AppCompatActivity {
                         searchDataClass.setVideo(dataArray.getJSONObject(i).getString("media_type").equalsIgnoreCase("VIDEO")?true:false);
                         searchDataClass.setVideoPath("");
                         searchDataClass.setMimeType(mediaType);
+
+                        if (!searchDataClass.isVideo()){
+                            if (searchDataClass.getMimeType().equalsIgnoreCase("CAROUSEL_ALBUM")){
+                                searchDataClass.setAlbum(true);
+                            }else{
+                                searchDataClass.setAlbum(false);
+                            }
+                        }
 
                         if (!Constants.isPremium(MainActivity.this) && i >= 10)
                             searchDataClass.setLocked(true);

@@ -14,7 +14,7 @@
       android:layout_height="match_parent"
       android:id="@+id/bg"
       android:scaleType="centerCrop"
-      android:visibility="visible"
+      android:visibility="gone"
       />
 
   <View

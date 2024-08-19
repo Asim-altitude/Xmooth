@@ -54,7 +54,7 @@ public class VideoScreen extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 
     String path = "";
-    boolean is_premium = false;
+    boolean is_premium = false, autoExit = false, autoPlay = true;
     boolean is_list = false;
     int current_list_index = 0;
 
@@ -73,7 +73,6 @@ public class VideoScreen extends AppCompatActivity {
 
         mediaController = new MediaController(this);
         sharedPreferences = getSharedPreferences(CloudDB.USER_PREFS,MODE_PRIVATE);
-        is_premium = true;
 
         username_txt = findViewById(R.id.username_txt);
         caption_txt = findViewById(R.id.caption_txt);
@@ -152,8 +151,13 @@ public class VideoScreen extends AppCompatActivity {
         });
         path = getIntent().getStringExtra("path");
         String id = getIntent().getStringExtra("id");
-        videolist = (ArrayList<SearchDataClass>) getIntent().getSerializableExtra("list");
+        autoExit = getIntent().getBooleanExtra("autoExit",false);
+        autoPlay = getIntent().getBooleanExtra("autoPlay",true);
+        videolist = (getIntent().hasExtra("list")) ? (ArrayList<SearchDataClass>) getIntent().getSerializableExtra("list") : null;
         getMediaInfo(id);
+
+        if (!autoPlay)
+            loop = true;
 
         init(path);
 
@@ -245,6 +249,12 @@ public class VideoScreen extends AppCompatActivity {
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+
+                if (autoExit)
+                {
+                    finish();
+                    return;
+                }
 
                 try {
 
@@ -502,7 +512,7 @@ public class VideoScreen extends AppCompatActivity {
 
     Handler handler1 = null;
     void showInfo(){
-        findViewById(R.id.info_lay).setVisibility(View.VISIBLE);
+        findViewById(R.id.info_lay).setVisibility(View.GONE);
 
     }
 

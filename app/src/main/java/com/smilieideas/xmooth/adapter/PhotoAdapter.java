@@ -100,11 +100,26 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.SearchViewHo
 
     }
 
+
     public void showPhotos(){
 
         searchDataClassList.clear();
         for (int i=0;i<tempList.size();i++){
             if (!tempList.get(i).isVideo()){
+                searchDataClassList.add(tempList.get(i));
+            }
+        }
+
+
+        notifyDataSetChanged();
+
+    }
+
+    public void showAlbums(){
+
+        searchDataClassList.clear();
+        for (int i=0;i<tempList.size();i++){
+            if (tempList.get(i).isAlbum()){
                 searchDataClassList.add(tempList.get(i));
             }
         }
